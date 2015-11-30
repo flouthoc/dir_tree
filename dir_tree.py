@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-#_author_ = flouthoc (http://github.com/flouthoc)
+#_author_ = flouthoc (http://github.com/flouthoc, http://twitter.com/flouthoc)
 import os
-def rec_tree(path, append, string=""):
+def dir_tree(path, append, string=""):
 	CYAN='\033[94m'
 	WHITE='\033[1;37m'
 	f=""
@@ -21,8 +21,6 @@ def rec_tree(path, append, string=""):
 	for x in directory:
 		point = point.replace('├', '└')
 		print "%s%s%s%s" %(point, CYAN, x, WHITE)
-		rec_tree(path+'/'+x, append, string)
+		dir_tree(path+'/'+x, append, string)
 	
-
-rec_tree('.', "")
 	
